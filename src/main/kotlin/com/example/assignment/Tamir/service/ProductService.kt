@@ -25,6 +25,11 @@ class ProductService(
         productRepository.findByIdOrNull(id)?.toDTO() ?: throw ElementNotFoundException("product with id: $id")
 
     @Transactional
+    fun deleteById(id: Long) {
+        productRepository.deleteById(id)
+    }
+
+    @Transactional
     fun getByName(name: String) =
         productRepository.findByName(name)?.toDTO() ?: throw ElementNotFoundException("product with name: $name")
 

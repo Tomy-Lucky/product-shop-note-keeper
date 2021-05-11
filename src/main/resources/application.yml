@@ -5,8 +5,6 @@ spring:
     username: root
     password: password
   jpa:
-    hibernate:
-      ddl-auto: update
     show-sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -14,6 +12,11 @@ spring:
     generate-ddl: true
   server:
     port: 8080
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres?user=root&password=password
+    baselineOnMigrate: true
+    schemas: public
+    enabled: true
 
 app:
   jwt:

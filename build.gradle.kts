@@ -30,6 +30,7 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
 	implementation ("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.1.8.RELEASE")
 	implementation ("com.auth0:auth0-spring-security-api:1.4.1")
+	implementation ("org.flywaydb:flyway-core:7.8.2")
 }
 
 tasks.withType<KotlinCompile> {

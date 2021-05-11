@@ -28,10 +28,7 @@ class JWTAuthorizationFilter(
             "/api.*",
             "/auth/.*",
             "/notes/.*",
-            "/account/add/user-card",
-            "/account/users",
-            "/game/add",
-            "/game/find-all"
+            "/product/.*"
         )
     }
 
